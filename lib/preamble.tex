@@ -16,17 +16,19 @@
 \usepackage{geometry}
 \renewcommand*\contentsname{Contents}
 \definecolor{namecolor}{cmyk}{1,.50,0,.10}
-\definecolor{titlepagecolor}{cmyk}{1,.209,0,.831}
+\definecolor{titlepagecolor}{cmyk}{1,.21,0,.64}
+\definecolor{mint}{cmyk}{.1310,0,.1071,.0118}
+\definecolor{teal}{cmyk}{.8523,.0909,.0000,.6549}
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\headrulewidth}{3pt}% 2pt header rule
 \renewcommand{\headrule}{\hbox to\headwidth{%
   \color{titlepagecolor}\leaders\hrule height \headrulewidth\hfill}}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE]{\hspace*{-0.2\headwidth}\colorbox{titlepagecolor!20}{\makebox[\dimexpr0.2\headwidth-2\fboxsep][c]{\strut\thepage}}%
-               \colorbox{titlepagecolor}{\makebox[\dimexpr\headwidth-2\fboxsep][l]{Section \strut\thesection}}}
-\fancyhead[LO]{\colorbox{titlepagecolor}{\makebox[\dimexpr\headwidth-2\fboxsep][r]{Section \strut\thesection}}%
-                \colorbox{titlepagecolor!20}{\makebox[\dimexpr0.2\headwidth-2\fboxsep][c]{\strut\thepage}}}
+\fancyhead[LE]{\color{teal}\hspace*{-0.2\headwidth}\colorbox{mint}{\makebox[\dimexpr0.2\headwidth-2\fboxsep][c]{\strut\thepage}}%
+               \color{white}\colorbox{titlepagecolor}{\makebox[\dimexpr\headwidth-2\fboxsep][l]{Section \strut\thesection}}}
+\fancyhead[LO]{\color{white}\colorbox{titlepagecolor}{\makebox[\dimexpr\headwidth-2\fboxsep][r]{Section \strut\thesection}}%
+                \color{teal}\colorbox{mint}{\makebox[\dimexpr0.2\headwidth-2\fboxsep][c]{\strut\thepage}}}
 \renewcommand{\headrulewidth}{0pt}
 %\lhead{\fancyplain{}{\leftmark }}
 %\rhead{\fancyplain{}{Alarm Clock}}
@@ -41,7 +43,7 @@
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 \lstset{ %
-language=[C]{Assembler},      % the language of the code
+%language=[C]{Assembler},       % the language of the code
 basicstyle=\scriptsize,         % the size of the fonts that are used for the code
 numbers=left,                   % where to put the line-numbers
 numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
