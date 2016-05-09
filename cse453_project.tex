@@ -19,6 +19,16 @@
   used to relay information from the printer control box and the nodes to the web page. The printer
   control box does what the name implies. Allows control of the printer through the web site as well
   as provides a button for canceling and completing print jobs.
+
+  \subsection{General Work flow}
+    \begin{enumerate}
+      \item Upload a print job trough the web interface
+      \item When the job is finished printing the red light on the printer control box
+      will blink. This means it is safe to clean off the print service and prepare the
+      surface for the next print job.
+      \item When the surface is ready for the next print job press the flashing red button
+      after about 10 seconds the light will turn solid and the next job will start.
+    \end{enumerate}
   \newpage
   \include{hub/hub}
 
